@@ -45,9 +45,9 @@ func main() {
 	var router http.Handler
 	if err != nil {
 		log.Println("no token")
-		router = InitRoute(false)
+		router = InitRouter(false)
 	} else {
-		router = InitRoute(true)
+		router = InitRouter(true)
 	}
 
 	_, certErr := os.Stat(certFlag)

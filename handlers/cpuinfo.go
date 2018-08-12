@@ -9,6 +9,7 @@ import (
 
 // Cpuinfo handle the cpu info file
 func Cpuinfo(w http.ResponseWriter, r *http.Request) {
+	
 	cpuinfo, err := proc.GetCPUInfo("")
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)

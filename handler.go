@@ -29,14 +29,14 @@ func SetToken(buf *bufio.Reader) error {
 }
 
 // add auth for api
-func withAuth(need_token bool, h http.HandlerFunc) http.HandlerFunc {
+func withAuth(needToken bool, h http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		if r.Method != "GET" {
 			w.WriteHeader(http.StatusMethodNotAllowed)
 			log.Println("Not allowed methed: ", r.Method, " from ", r.RemoteAddr)
 			return
 		}
-		if need_token {
+		if needToken {
 			token := r.Header.Get("token")
 			if value, ok := tokenList[token]; !(ok && value) {
 				w.WriteHeader(http.StatusUnauthorized)
@@ -45,7 +45,7 @@ func withAuth(need_token bool, h http.HandlerFunc) http.HandlerFunc {
 			}
 		}
 		w.Header().Set("Content-Type", "application/json")
-		log.Println("request " + r.RequestURI + " from ", r.RemoteAddr)
+		log.Println("request "+r.RequestURI+" from ", r.RemoteAddr)
 		h(w, r)
 	}
 }
