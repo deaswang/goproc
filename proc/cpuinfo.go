@@ -5,7 +5,7 @@ import (
 )
 
 // Default cpuinfo file path
-const cpuinfoPath string = "/proc/cpuinfo"
+const cpuinfoPath = "/proc/cpuinfo"
 
 // Processor ...
 // single processor data struct

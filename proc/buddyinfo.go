@@ -6,7 +6,7 @@ import (
 )
 
 // Default buddyinfo file path
-const buddyinfoPath string = "/proc/buddyinfo"
+const buddyinfoPath = "/proc/buddyinfo"
 
 // Buddy single buddy info
 type Buddy struct {
@@ -35,7 +35,6 @@ func GetBuddyInfo(path string) (*BuddyInfo, error) {
 		if len(fields) <= 0 {
 			continue
 		}
-		print(fields)
 		i := 0
 		if fields[i] != "Node" {
 			continue

@@ -18,6 +18,7 @@ var routerList = map[string]http.HandlerFunc{
 	"/":          index,
 	"/cpuinfo":   handlers.Cpuinfo,
 	"/buddyinfo": handlers.Buddyinfo,
+	"/diskstats": handlers.Diskstats,
 }
 
 // ServeHTTP custom route
