@@ -5,7 +5,6 @@ import (
 	"io/ioutil"
 	"strings"
 	"strconv"
-	"net/http"
 )
 
 // readFile read lines from path, if path is not exist read defaultPath
@@ -23,11 +22,6 @@ func readFile(path, defaultPath string) (lines []string, err error) {
 	lines = strings.Split(string(b), "\n")
 
 	return lines, nil
-}
-
-func getRequestParams(r *http.Request, field string) []string {
-	r.ParseForm()
-	return []string{}
 }
 
 // parseInt parse int value

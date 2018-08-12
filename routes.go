@@ -31,6 +31,7 @@ func (router *Router) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 			break
 		} else {
 			handlers.Process(w, r, pid)
+			return
 		}
 	}
 	router.ServeMux.ServeHTTP(w, r)
