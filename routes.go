@@ -15,10 +15,12 @@ type Router struct {
 
 // define router list
 var routerList = map[string]http.HandlerFunc{
-	"/":        index,
-	"/cpuinfo": handlers.Cpuinfo,
+	"/":          index,
+	"/cpuinfo":   handlers.Cpuinfo,
+	"/buddyinfo": handlers.Buddyinfo,
 }
 
+// ServeHTTP custom route
 func (router *Router) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	uri := r.RequestURI
 	uris := strings.Split(uri, "/")
