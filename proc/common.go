@@ -24,33 +24,6 @@ func readFile(path, defaultPath string) (lines []string, err error) {
 	return lines, nil
 }
 
-// parseInt parse int value
-func parseInt(value string) int {
-	ret, err := strconv.Atoi(value)
-	if err != nil {
-		return 0
-	}
-	return ret
-}
-
-// parseUInt64 parse uint64
-func parseUint(value string) uint64 {
-	ret, err := strconv.ParseUint(value, 10, 64)
-	if err != nil {
-		return 0
-	}
-	return ret
-}
-
-// parseFloat parse float64 value
-func parseFloat(value string) float64 {
-	ret, err := strconv.ParseFloat(value, 0)
-	if err != nil {
-		return 0.0
-	}
-	return ret
-}
-
 // parseSizeByte parse size value with Byte
 func parseSizeByte(value string) int64 {
 	space := strings.IndexAny(value, " \t")

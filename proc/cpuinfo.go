@@ -1,6 +1,7 @@
 package proc
 
 import (
+	"strconv"
 	"strings"
 )
 
@@ -54,29 +55,30 @@ func GetCPUInfo(path string) (*CPUInfo, error) {
 		switch key {
 		case "processor":
 			if processor.ID < 0 {
-				processor.ID = parseInt(value)
+				processor.ID, _ = strconv.Atoi(value)
 			} else {
 				cpuinfo.Processors = append(cpuinfo.Processors, processor)
-				processor = Processor{ID: parseInt(value)}
+				id, _ := strconv.Atoi(value)
+				processor = Processor{ID: id}
 			}
 		case "vendor_id":
 			processor.VendorID = value
 		case "cpu family":
-			processor.Family = parseInt(value)
+			processor.Family, _ = strconv.Atoi(value)
 		case "model":
-			processor.Model = parseInt(value)
+			processor.Model, _ = strconv.Atoi(value)
 		case "model name":
 			processor.ModelName = value
 		case "cpu MHz":
-			processor.MHz = parseFloat(value)
+			processor.MHz, _ = strconv.ParseFloat(value, 64)
 		case "cache size":
 			processor.CacheSize = parseSizeByte(value)
 		case "physical id":
-			processor.PhysicalID = parseInt(value)
+			processor.PhysicalID, _ = strconv.Atoi(value)
 		case "core id":
-			processor.CoreID = parseInt(value)
+			processor.CoreID, _ = strconv.Atoi(value)
 		case "cpu cores":
-			processor.Cores = parseInt(value)
+			processor.Cores, _ = strconv.Atoi(value)
 		case "fpu":
 			processor.Fpu = parseBool(value)
 		case "fpu_exception":

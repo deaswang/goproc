@@ -48,8 +48,8 @@ func GetDiskStats(path string) (*DiskStats, error) {
 		if len(fields) <= 0 {
 			continue
 		}
-		disk.Major = parseInt(fields[0])
-		disk.Minor = parseInt(fields[1])
+		disk.Major, _ = strconv.Atoi(fields[0])
+		disk.Minor, _ = strconv.Atoi(fields[1])
 		disk.Name = fields[2]
 		disk.ReadIOs, _ = strconv.ParseUint(fields[3], 10, 64)
 		disk.ReadMerged, _ = strconv.ParseUint(fields[4], 10, 64)

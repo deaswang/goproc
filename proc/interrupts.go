@@ -2,6 +2,7 @@ package proc
 
 import (
 	"errors"
+	"strconv"
 	"strings"
 )
 
@@ -28,12 +29,14 @@ func GetInterrupts(path string) (*Interrupts, error) {
 	}
 
 	var interrupts = Interrupts{}
+	var numCPU int
 	var nameCPU []string
 
 	for i, line := range lines {
 		if i == 0 {
 			nameCPU = strings.Fields(line)
-			if len(nameCPU) <= 0 {
+			numCPU = len(nameCPU)
+			if numCPU <= 0 {
 				return nil, errors.New("can`t get cpu")
 			}
 			continue
@@ -43,11 +46,14 @@ func GetInterrupts(path string) (*Interrupts, error) {
 			continue
 		}
 		interrupt := Interrupt{}
-		interrupt.Counts = make(map[string]uint64, len(nameCPU))
+		interrupt.Counts = make(map[string]uint64, numCPU)
 		interrupt.Name = strings.TrimSuffix(fields[0], ":")
 		j := 1
-		for ; j < len(nameCPU)+1 && j < len(fields); j++ {
-			interrupt.Counts[nameCPU[j-1]] = parseUint(fields[j])
+		for ; j < numCPU+1 && j < len(fields); j++ {
+			interrupt.Counts[nameCPU[j-1]], err = strconv.ParseUint(fields[j], 10, 64)
+			if err != nil {
+				return nil, err
+			}
 		}
 		interrupt.Description = strings.Join(fields[j:], " ")
 		interrupts.Entry = append(interrupts.Entry, interrupt)
