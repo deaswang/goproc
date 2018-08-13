@@ -25,14 +25,17 @@ func readFile(path, defaultPath string) (lines []string, err error) {
 }
 
 // parseSizeByte parse size value with Byte
-func parseSizeByte(value string) int64 {
+func parseSizeByte(value string) uint64 {
 	space := strings.IndexAny(value, " \t")
 	if space < 0 {
 		space = len(value)
 	}
-	ret, err := strconv.ParseInt(value[:space], 10, 64)
+	ret, err := strconv.ParseUint(value[:space], 10, 64)
 	if err != nil {
 		return 0
+	}
+	if strings.HasSuffix(value, "GB") || strings.HasSuffix(value, "gB") {
+		ret *= 1024 * 1024 * 1024
 	}
 	if strings.HasSuffix(value, "MB") || strings.HasSuffix(value, "mB") {
 		ret *= 1024 * 1024

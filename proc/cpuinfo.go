@@ -17,7 +17,7 @@ type Processor struct {
 	Model      int      `json:"model"`
 	ModelName  string   `json:"model_name"`
 	MHz        float64  `json:"cpu_mhz"`
-	CacheSize  int64    `json:"cache_size"`
+	CacheSize  uint64   `json:"cache_size"`
 	PhysicalID int      `json:"physical_id"`
 	CoreID     int      `json:"core_id"`
 	Cores      int      `json:"cpu_cores"`
