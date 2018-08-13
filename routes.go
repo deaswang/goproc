@@ -15,10 +15,11 @@ type Router struct {
 
 // define router list
 var routerList = map[string]http.HandlerFunc{
-	"/":          index,
-	"/cpuinfo":   handlers.Cpuinfo,
-	"/buddyinfo": handlers.Buddyinfo,
-	"/diskstats": handlers.Diskstats,
+	"/":           index,
+	"/cpuinfo":    handlers.Cpuinfo,
+	"/buddyinfo":  handlers.Buddyinfo,
+	"/diskstats":  handlers.Diskstats,
+	"/interrupts": handlers.Interrupts,
 }
 
 // ServeHTTP custom route

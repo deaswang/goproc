@@ -33,6 +33,15 @@ func parseInt(value string) int {
 	return ret
 }
 
+// parseUInt64 parse uint64
+func parseUint(value string) uint64 {
+	ret, err := strconv.ParseUint(value, 10, 64)
+	if err != nil {
+		return 0
+	}
+	return ret
+}
+
 // parseFloat parse float64 value
 func parseFloat(value string) float64 {
 	ret, err := strconv.ParseFloat(value, 0)
