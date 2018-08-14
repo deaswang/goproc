@@ -24,6 +24,7 @@ var routerList = map[string]http.HandlerFunc{
 	"/locks":      handlers.Locks,
 	"/meminfo":    handlers.Meminfo,
 	"/misc":       handlers.Misc,
+	"/mounts":     handlers.Mounts,
 }
 
 // ServeHTTP custom route
