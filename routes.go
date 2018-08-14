@@ -27,6 +27,7 @@ var routerList = map[string]http.HandlerFunc{
 	"/mounts":     handlers.Mounts,
 	"/partitions": handlers.Partitions,
 	"/snmp":       handlers.Snmp,
+	"/softirqs":   handlers.Softirqs,
 }
 
 // ServeHTTP custom route
