@@ -11,12 +11,12 @@ import (
 func Diskstats(w http.ResponseWriter, r *http.Request) {
 	diskstats, err := proc.GetDiskStats("")
 	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	b, err := json.Marshal(diskstats)
 	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	w.WriteHeader(http.StatusOK)

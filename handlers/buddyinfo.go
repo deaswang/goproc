@@ -11,12 +11,12 @@ import (
 func Buddyinfo(w http.ResponseWriter, r *http.Request) {
 	buddyinfo, err := proc.GetBuddyInfo("")
 	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	b, err := json.Marshal(buddyinfo)
 	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	w.WriteHeader(http.StatusOK)

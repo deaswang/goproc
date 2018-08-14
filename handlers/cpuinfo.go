@@ -12,7 +12,7 @@ import (
 func Cpuinfo(w http.ResponseWriter, r *http.Request) {
 	cpuinfo, err := proc.GetCPUInfo("")
 	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	r.ParseForm()
@@ -26,7 +26,7 @@ func Cpuinfo(w http.ResponseWriter, r *http.Request) {
 				}
 				b, err := json.Marshal(mhz)
 				if err != nil {
-					w.WriteHeader(http.StatusInternalServerError)
+					http.Error(w, err.Error(), http.StatusInternalServerError)
 					return
 				}
 				w.WriteHeader(http.StatusOK)
@@ -34,11 +34,11 @@ func Cpuinfo(w http.ResponseWriter, r *http.Request) {
 				return
 			}
 		}
-		w.WriteHeader(http.StatusBadRequest)
+		http.Error(w, err.Error(), http.StatusBadRequest)
 	} else {
 		b, err := json.Marshal(cpuinfo)
 		if err != nil {
-			w.WriteHeader(http.StatusInternalServerError)
+			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
 		w.WriteHeader(http.StatusOK)

@@ -11,12 +11,12 @@ import (
 func Meminfo(w http.ResponseWriter, r *http.Request) {
 	meminfo, err := proc.GetMemInfo("")
 	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	b, err := json.Marshal(meminfo)
 	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	w.WriteHeader(http.StatusOK)

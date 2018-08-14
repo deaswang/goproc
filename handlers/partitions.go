@@ -11,12 +11,12 @@ import (
 func Partitions(w http.ResponseWriter, r *http.Request) {
 	partitions, err := proc.GetPartitions("")
 	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	b, err := json.Marshal(partitions)
 	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	w.WriteHeader(http.StatusOK)

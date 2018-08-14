@@ -11,12 +11,12 @@ import (
 func Mounts(w http.ResponseWriter, r *http.Request) {
 	mounts, err := proc.GetMounts("")
 	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	b, err := json.Marshal(mounts)
 	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	w.WriteHeader(http.StatusOK)

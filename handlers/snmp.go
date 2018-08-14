@@ -7,14 +7,14 @@ import (
 	"github.com/deaswang/goproc/proc"
 )
 
-// Loadavg handle the loadavg file
-func Loadavg(w http.ResponseWriter, r *http.Request) {
-	loadavg, err := proc.GetLoadAvg("")
+// Snmp handle the snmp file
+func Snmp(w http.ResponseWriter, r *http.Request) {
+	snmp, err := proc.GetSnmp("")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	b, err := json.Marshal(loadavg)
+	b, err := json.Marshal(snmp)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -22,4 +22,3 @@ func Loadavg(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Write(b)
 }
-
