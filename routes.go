@@ -30,6 +30,7 @@ var routerList = map[string]http.HandlerFunc{
 	"/softirqs":   handlers.Softirqs,
 	"/stat":       handlers.Stat,
 	"/uptime":     handlers.Uptime,
+	"/version":    handlers.Version,
 }
 
 // ServeHTTP custom route
