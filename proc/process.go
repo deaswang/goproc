@@ -7,14 +7,24 @@ import (
 
 const procPath = "/proc"
 
-// BaseProcess
+// BaseProcess simple base process info
 type BaseProcess struct {
-	ID   int   `json:"id"`
+	ID      int     `json:"id"`
+	Cmdline string  `json:"cmdline"`
+	State   string  `json:"state"`
 }
 
-// Process
+// Process detail process info
 type Process struct {
-
+	ID      int                           `json:"id"`
+	Cmdline string                        `json:"cmdline"`
+	Environ string                        `json:"environ"`
+	Fdinfo  []ProcessFdInfo               `json:"fdinfo"`
+	Io      map[string]uint64             `json:"io"`
+	Limits  map[string]map[string]string  `json:"limits"`
+	Stat    *ProcessStat                  `json:"stat"`
+	Statm   *ProcessStatm                 `json:"statm"`
+	Status  map[string]string             `json:"status"`
 }
 
 // GetProcesses get all process base info
@@ -30,6 +40,11 @@ func GetProcesses() (map[int]BaseProcess, error) {
 			if err == nil {
 				p := BaseProcess{}
 				p.ID = pid
+				p.Cmdline, _ = GetProcessCmdline(pid)
+				stat, err := GetProcessStat(pid)
+				if err == nil {
+					p.State = stat.State
+				}
 				ret[pid] = p
 			}
 		}
@@ -39,6 +54,39 @@ func GetProcesses() (map[int]BaseProcess, error) {
 
 // GetProcess single process detail info
 func GetProcess(pid int) (*Process, error) {
-	return nil, nil
-}
+	var process = Process{ID: pid}
+	var err error
+	if process.Cmdline, err = GetProcessCmdline(pid); err != nil {
+		process.Cmdline = ""
+	}
 
+	if process.Environ, err = GetProcessEnviron(pid); err != nil {
+		process.Environ = ""
+	}
+
+	if process.Fdinfo, err = GetProcessFdInfo(pid); err != nil {
+		process.Fdinfo = nil
+	}
+
+	if process.Io, err = GetProcessIO(pid); err != nil {
+		process.Io = nil
+	}
+
+	if process.Limits, err = GetProcessLimits(pid); err != nil {
+		process.Limits = nil
+	}
+
+	if process.Stat, err = GetProcessStat(pid); err != nil {
+		process.Stat = nil
+	}
+
+	if process.Statm, err = GetProcessStatm(pid); err != nil {
+		process.Statm = nil
+	}
+
+	if process.Status, err = GetProcessStatus(pid); err != nil {
+		process.Status = nil
+	}
+
+	return &process, nil
+}
