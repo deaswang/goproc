@@ -32,6 +32,7 @@ var routerList = map[string]http.HandlerFunc{
 	"/uptime":     handlers.Uptime,
 	"/version":    handlers.Version,
 	"/vmstat":     handlers.Vmstat,
+	"/processes":  handlers.Processes,
 }
 
 // ServeHTTP custom route
