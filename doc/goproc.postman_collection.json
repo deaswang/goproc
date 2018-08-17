@@ -1,0 +1,441 @@
+{
+	"info": {
+		"_postman_id": "c12782d6-f288-4f21-ba5b-3b4f7c581194",
+		"name": "goproc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "127.0.0.1:3000/cpuinfo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:3000/cpuinfo",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"cpuinfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/uptime",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:3000/uptime",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"uptime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/version",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:3000/version",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"version"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/vmstat",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:3000/version",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"version"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/meminfo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:3000/meminfo",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"meminfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/misc",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:3000/misc",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"misc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/mounts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:3000/mounts",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"mounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/partitions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:3000/partitions",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"partitions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/softirqs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:3000/softirqs",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"softirqs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/stat",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:3000/stat",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"stat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/snmp",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:3000/snmp",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"snmp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/locks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:3000/locks",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"locks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/loadavg",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:3000/loadavg",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"loadavg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/buddyinfo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:3000/buddyinfo",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"buddyinfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/interrupts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:3000/interrupts",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"interrupts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/diskstats",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:3000/diskstats",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"diskstats"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
