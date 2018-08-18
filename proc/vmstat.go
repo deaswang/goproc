@@ -8,8 +8,8 @@ import (
 // Default vmstat file path
 const vmstatPath = "/proc/vmstat"
 
-// GetVmStat read the vmstat file
-func GetVmStat(path string) (map[string]uint64, error) {
+// GetVMStat read the vmstat file
+func GetVMStat(path string) (map[string]uint64, error) {
 	lines, err := readFile(path, vmstatPath)
 	if err != nil {
 		return nil, err

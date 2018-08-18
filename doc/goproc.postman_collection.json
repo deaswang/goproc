@@ -195,6 +195,33 @@
 			"response": []
 		},
 		{
+			"name": "127.0.0.1:3000/net",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:3000/net",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"net"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "127.0.0.1:3000/mounts",
 			"request": {
 				"method": "GET",

@@ -7,14 +7,14 @@ import (
 	"github.com/deaswang/goproc/proc"
 )
 
-// Vmstat handle the vmstat file
-func Vmstat(w http.ResponseWriter, r *http.Request) {
-	vmstat, err := proc.GetVMStat("")
+// Net handle the net api
+func Net(w http.ResponseWriter, r *http.Request) {
+	net, err := proc.GetNet("")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	b, err := json.Marshal(vmstat)
+	b, err := json.Marshal(net)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
