@@ -38,6 +38,7 @@ use postman to open doc/goproc.postman_collection.json test.
 
 ## API
 
+```
 GET /cpuinfo
 GET /buddyinfo
 GET /diskstats
@@ -56,5 +57,6 @@ GET /version
 GET /vmstat
 GET /processes
 GET /net
+```
 
 It will return json response.
