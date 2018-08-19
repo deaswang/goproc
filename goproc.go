@@ -44,7 +44,7 @@ func readToken() error {
 func main() {
 	flag.Parse()
 
-	log.Println("goproc api server version ", Version)
+	log.Println("goproc api server version", Version)
 	err := readToken()
 	var router http.Handler
 	if err != nil {

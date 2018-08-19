@@ -1,8 +1,11 @@
 package proc
 
 import (
+	"errors"
+	"os"
 	"io/ioutil"
 	"strconv"
+	"path/filepath"
 )
 
 const procPath = "/proc"
@@ -54,8 +57,12 @@ func GetProcesses() (map[int]BaseProcess, error) {
 
 // GetProcess single process detail info
 func GetProcess(pid int) (*Process, error) {
+	p, err := os.Stat(filepath.Join(procPath, strconv.Itoa(pid)))
+	if err != nil || !p.IsDir(){
+		return nil, errors.New("process is not exist")
+	}
+
 	var process = Process{ID: pid}
-	var err error
 	if process.Cmdline, err = GetProcessCmdline(pid); err != nil {
 		process.Cmdline = ""
 	}
