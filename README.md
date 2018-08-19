@@ -57,6 +57,8 @@ GET /version
 GET /vmstat
 GET /processes
 GET /net
+
+GET /{pid}  for example: GET /666
 ```
 
 It will return json response.

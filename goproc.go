@@ -9,6 +9,9 @@ import (
 	"strconv"
 )
 
+// Version
+const Version = "0.1"
+
 var portFlag int
 var tokenFlag string
 var certFlag string
@@ -41,6 +44,7 @@ func readToken() error {
 func main() {
 	flag.Parse()
 
+	log.Println("goproc api server version ", Version)
 	err := readToken()
 	var router http.Handler
 	if err != nil {
