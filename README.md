@@ -61,4 +61,20 @@ GET /net
 GET /{pid}  for example: GET /666
 ```
 
-It will return json response.
+It will return json response or error.
+
+## Docker
+
+Build docker at root path.
+
+```bash
+docker build -t goproc .
+```
+
+Run docker container.
+
+```bash
+docker run -d -p 3000:3000 goproc
+```
+
+Use docker may lack of some proc file info.
