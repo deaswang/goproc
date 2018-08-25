@@ -1,5 +1,7 @@
 # goproc
 
+[![Build Status](https://travis-ci.org/deaswang/goproc.svg?branch=master)](https://travis-ci.org/deaswang/goproc)
+
 goproc is an RESTful api server for view linux /proc path file information.
 
 goproc 是读取 linux proc 路径内文件信息的 RESTful API。
@@ -22,7 +24,7 @@ Usage of goproc:
   -key string
         The key file name for tls. (default "ssl.key")
   -port int
-        The proxy server port. (default 3000)
+        The proxy server port. (default 8809)
   -token string
         The token file for authentication. (default "token.txt")
 ```
@@ -74,7 +76,7 @@ docker build -t goproc .
 Run docker container.
 
 ```bash
-docker run -d -p 3000:3000 goproc
+docker run -d -p 8809:8809 goproc
 ```
 
 Use docker may lack of some proc file info.

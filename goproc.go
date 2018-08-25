@@ -21,7 +21,7 @@ var keyFlag string
 // init default flag and flag value
 func init() {
 	const (
-		defaultPort  = 3000
+		defaultPort  = 8809
 		defaultToken = "token.txt"
 		defaultCert  = "ssl.csr"
 		defaultKey   = "ssl.key"
