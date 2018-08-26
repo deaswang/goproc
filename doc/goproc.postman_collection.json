@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "127.0.0.1:3000/cpuinfo",
+			"name": "cpuinfo",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -17,14 +17,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/cpuinfo",
+					"raw": "127.0.0.1:{{port}}/cpuinfo",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"cpuinfo"
 					]
@@ -33,7 +33,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/uptime",
+			"name": "uptime",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -44,14 +44,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/uptime",
+					"raw": "127.0.0.1:{{port}}/uptime",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"uptime"
 					]
@@ -60,7 +60,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/version",
+			"name": "version",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -71,14 +71,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/version",
+					"raw": "127.0.0.1:{{port}}/version",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"version"
 					]
@@ -87,7 +87,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/vmstat",
+			"name": "vmstat",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -98,14 +98,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/vmstat",
+					"raw": "127.0.0.1:{{port}}/vmstat",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"vmstat"
 					]
@@ -114,7 +114,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/processes",
+			"name": "processes",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -125,14 +125,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/processes",
+					"raw": "127.0.0.1:{{port}}/processes",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"processes"
 					]
@@ -141,7 +141,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/meminfo",
+			"name": "meminfo",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -152,14 +152,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/meminfo",
+					"raw": "127.0.0.1:{{port}}/meminfo",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"meminfo"
 					]
@@ -168,7 +168,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/misc",
+			"name": "misc",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -179,14 +179,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/misc",
+					"raw": "127.0.0.1:{{port}}/misc",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"misc"
 					]
@@ -195,7 +195,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/net",
+			"name": "net",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -206,14 +206,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/net",
+					"raw": "127.0.0.1:{{port}}/net",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"net"
 					]
@@ -222,7 +222,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/mounts",
+			"name": "mounts",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -233,14 +233,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/mounts",
+					"raw": "127.0.0.1:{{port}}/mounts",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"mounts"
 					]
@@ -249,7 +249,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/partitions",
+			"name": "partitions",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -260,14 +260,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/partitions",
+					"raw": "127.0.0.1:{{port}}/partitions",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"partitions"
 					]
@@ -276,7 +276,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/softirqs",
+			"name": "softirqs",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -287,14 +287,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/softirqs",
+					"raw": "127.0.0.1:{{port}}/softirqs",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"softirqs"
 					]
@@ -303,7 +303,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/stat",
+			"name": "stat",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -314,14 +314,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/stat",
+					"raw": "127.0.0.1:{{port}}/stat",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"stat"
 					]
@@ -330,7 +330,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/snmp",
+			"name": "snmp",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -341,14 +341,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/snmp",
+					"raw": "127.0.0.1:{{port}}/snmp",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"snmp"
 					]
@@ -357,7 +357,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/locks",
+			"name": "locks",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -368,14 +368,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/locks",
+					"raw": "127.0.0.1:{{port}}/locks",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"locks"
 					]
@@ -384,7 +384,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/loadavg",
+			"name": "loadavg",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -395,14 +395,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/loadavg",
+					"raw": "127.0.0.1:{{port}}/loadavg",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"loadavg"
 					]
@@ -411,7 +411,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/buddyinfo",
+			"name": "buddyinfo",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -422,14 +422,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/buddyinfo",
+					"raw": "127.0.0.1:{{port}}/buddyinfo",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"buddyinfo"
 					]
@@ -438,7 +438,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/interrupts",
+			"name": "interrupts",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -449,14 +449,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/interrupts",
+					"raw": "127.0.0.1:{{port}}/interrupts",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"interrupts"
 					]
@@ -465,7 +465,7 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/diskstats",
+			"name": "diskstats",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -476,14 +476,14 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/diskstats",
+					"raw": "127.0.0.1:{{port}}/diskstats",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
 						"diskstats"
 					]
@@ -492,22 +492,22 @@
 			"response": []
 		},
 		{
-			"name": "127.0.0.1:3000/598",
+			"name": "666",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "127.0.0.1:3000/598",
+					"raw": "127.0.0.1:{{port}}/666",
 					"host": [
 						"127",
 						"0",
 						"0",
 						"1"
 					],
-					"port": "3000",
+					"port": "{{port}}",
 					"path": [
-						"598"
+						"666"
 					]
 				}
 			},
