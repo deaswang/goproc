@@ -12,7 +12,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -39,7 +39,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -66,7 +66,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -93,7 +93,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -120,7 +120,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -147,7 +147,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -174,7 +174,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -201,7 +201,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -228,7 +228,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -255,7 +255,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -282,7 +282,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -309,7 +309,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -336,7 +336,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -363,7 +363,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -390,7 +390,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -417,7 +417,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -444,7 +444,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -471,7 +471,7 @@
 				"header": [
 					{
 						"key": "token",
-						"value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204"
+						"value": "{{token}}"
 					}
 				],
 				"body": {},
@@ -495,7 +495,12 @@
 			"name": "666",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}"
+					}
+				],
 				"body": {},
 				"url": {
 					"raw": "127.0.0.1:{{port}}/666",
