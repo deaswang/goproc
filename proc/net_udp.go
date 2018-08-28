@@ -22,7 +22,7 @@ func GetNetUDP(path string) ([]NetUDP, error) {
 		return nil, err
 	}
 
-	udp := make([]NetUDP, len(lines) - 2)
+	udp := make([]NetUDP, len(lines)-2)
 
 	for i, line := range lines[1:] {
 

@@ -3,9 +3,9 @@ package proc
 import (
 	"errors"
 	"io/ioutil"
+	"path/filepath"
 	"strconv"
 	"strings"
-	"path/filepath"
 )
 
 // GetProcessLimits get limits info for pid
@@ -32,9 +32,9 @@ func GetProcessLimits(pid int) (map[string]map[string]string, error) {
 			continue
 		}
 		pl := make(map[string]string)
-		nameLimit := strings.TrimSpace(line[indexLimit: indexSoft])
-		pl["Soft Limit"] = strings.TrimSpace(line[indexSoft: indexHard])
-		pl["Hard Limit"] = strings.TrimSpace(line[indexHard: indexUnits])
+		nameLimit := strings.TrimSpace(line[indexLimit:indexSoft])
+		pl["Soft Limit"] = strings.TrimSpace(line[indexSoft:indexHard])
+		pl["Hard Limit"] = strings.TrimSpace(line[indexHard:indexUnits])
 		pl["Units"] = strings.TrimSpace(line[indexUnits:])
 		pls[nameLimit] = pl
 	}

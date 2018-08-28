@@ -18,7 +18,7 @@ type Partition struct {
 
 // Partitions define partitions file
 type Partitions struct {
-	Partitions  []Partition   `json:"partitions"`
+	Partitions []Partition `json:"partitions"`
 }
 
 // GetPartitions read the partitions file

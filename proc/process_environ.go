@@ -2,9 +2,9 @@ package proc
 
 import (
 	"io/ioutil"
+	"path/filepath"
 	"strconv"
 	"strings"
-	"path/filepath"
 )
 
 // GetProcessEnviron get process environ info
@@ -13,6 +13,6 @@ func GetProcessEnviron(pid int) (string, error) {
 	b, err := ioutil.ReadFile(path)
 	if err != nil {
 		return "", err
-	 }
-	 return strings.TrimSpace(string(b)), nil
+	}
+	return strings.TrimSpace(string(b)), nil
 }

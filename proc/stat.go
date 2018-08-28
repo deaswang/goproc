@@ -11,15 +11,15 @@ const statPath = "/proc/stat"
 
 // Stat the stat struct
 type Stat struct {
-	CPUStatAll      CPUStat   `json:"cpu_all"`
-	CPUStats        []CPUStat `json:"cpus"`
-	Intr            []uint64  `json:"intr"`
-	Ctxt            uint64    `json:"ctxt"`
-	BootTime        time.Time `json:"btime"`
-	Processes       uint64    `json:"processes"`
-	ProcsRunning    uint64    `json:"procs_running"`
-	ProcsBlocked    uint64    `json:"procs_blocked"`
-	Softirq         []uint64  `json:"softirq"`
+	CPUStatAll   CPUStat   `json:"cpu_all"`
+	CPUStats     []CPUStat `json:"cpus"`
+	Intr         []uint64  `json:"intr"`
+	Ctxt         uint64    `json:"ctxt"`
+	BootTime     time.Time `json:"btime"`
+	Processes    uint64    `json:"processes"`
+	ProcsRunning uint64    `json:"procs_running"`
+	ProcsBlocked uint64    `json:"procs_blocked"`
+	Softirq      []uint64  `json:"softirq"`
 }
 
 // CPUStat the stat of CPU

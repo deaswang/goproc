@@ -26,7 +26,7 @@ func GetNetTCP(path string) ([]NetTCP, error) {
 		return nil, err
 	}
 
-	tcp := make([]NetTCP, len(lines) - 2)
+	tcp := make([]NetTCP, len(lines)-2)
 
 	for i, line := range lines[1:] {
 

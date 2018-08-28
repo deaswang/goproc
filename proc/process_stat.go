@@ -2,9 +2,9 @@ package proc
 
 import (
 	"io/ioutil"
+	"path/filepath"
 	"strconv"
 	"strings"
-	"path/filepath"
 )
 
 // ProcessStat the process stat info
@@ -65,7 +65,7 @@ type ProcessStat struct {
 }
 
 // GetProcessStat get stat info for pid
-func  GetProcessStat(pid int) (*ProcessStat, error) {
+func GetProcessStat(pid int) (*ProcessStat, error) {
 	path := filepath.Join(procPath, strconv.Itoa(pid), "stat")
 
 	b, err := ioutil.ReadFile(path)

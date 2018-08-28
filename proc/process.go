@@ -2,32 +2,32 @@ package proc
 
 import (
 	"errors"
-	"os"
 	"io/ioutil"
-	"strconv"
+	"os"
 	"path/filepath"
+	"strconv"
 )
 
 const procPath = "/proc"
 
 // BaseProcess simple base process info
 type BaseProcess struct {
-	ID      int     `json:"id"`
-	Cmdline string  `json:"cmdline"`
-	State   string  `json:"state"`
+	ID      int    `json:"id"`
+	Cmdline string `json:"cmdline"`
+	State   string `json:"state"`
 }
 
 // Process detail process info
 type Process struct {
-	ID      int                           `json:"id"`
-	Cmdline string                        `json:"cmdline"`
-	Environ string                        `json:"environ"`
-	Fdinfo  []ProcessFdInfo               `json:"fdinfo"`
-	Io      map[string]uint64             `json:"io"`
-	Limits  map[string]map[string]string  `json:"limits"`
-	Stat    *ProcessStat                  `json:"stat"`
-	Statm   *ProcessStatm                 `json:"statm"`
-	Status  map[string]string             `json:"status"`
+	ID      int                          `json:"id"`
+	Cmdline string                       `json:"cmdline"`
+	Environ string                       `json:"environ"`
+	Fdinfo  []ProcessFdInfo              `json:"fdinfo"`
+	Io      map[string]uint64            `json:"io"`
+	Limits  map[string]map[string]string `json:"limits"`
+	Stat    *ProcessStat                 `json:"stat"`
+	Statm   *ProcessStatm                `json:"statm"`
+	Status  map[string]string            `json:"status"`
 }
 
 // GetProcesses get all process base info
@@ -58,7 +58,7 @@ func GetProcesses() (map[int]BaseProcess, error) {
 // GetProcess single process detail info
 func GetProcess(pid int) (*Process, error) {
 	p, err := os.Stat(filepath.Join(procPath, strconv.Itoa(pid)))
-	if err != nil || !p.IsDir(){
+	if err != nil || !p.IsDir() {
 		return nil, errors.New("process is not exist")
 	}
 

@@ -9,12 +9,12 @@ const netArpPath = "/proc/net/arp"
 
 // NetArp the net/arp file info
 type NetArp struct {
-	IPAddress   string   `json:"ip_address"`
-	HWType      string   `json:"hw_type"`
-	Flags       string   `json:"flags"`
-	HWAddress   string   `json:"hw_address"`
-	Mask        string   `json:"mask"`
-	Device      string   `json:"device"`
+	IPAddress string `json:"ip_address"`
+	HWType    string `json:"hw_type"`
+	Flags     string `json:"flags"`
+	HWAddress string `json:"hw_address"`
+	Mask      string `json:"mask"`
+	Device    string `json:"device"`
 }
 
 // GetNetArp read the net/arp folder

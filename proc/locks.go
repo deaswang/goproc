@@ -25,7 +25,7 @@ type Lock struct {
 
 // Locks all locks
 type Locks struct {
-	Ls  []Lock  `json:"ls"`
+	Ls []Lock `json:"ls"`
 }
 
 // GetLocks get locks info from path

@@ -2,9 +2,9 @@ package proc
 
 import (
 	"io/ioutil"
+	"path/filepath"
 	"strconv"
 	"strings"
-	"path/filepath"
 )
 
 // ProcessStatm the statm file info

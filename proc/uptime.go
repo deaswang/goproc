@@ -12,8 +12,8 @@ const uptimePath = "/proc/uptime"
 
 // Uptime the uptime struct
 type Uptime struct {
-	Total  string `json:"total"`
-	Idle   string `json:"idle"`
+	Total string `json:"total"`
+	Idle  string `json:"idle"`
 }
 
 // GetUptime read the uptime file

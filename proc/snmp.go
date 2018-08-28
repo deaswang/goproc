@@ -30,7 +30,7 @@ func GetSnmp(path string) (map[string]map[string]uint64, error) {
 		protocolMap := make(map[string]uint64)
 		keys := strings.Fields(header[1])
 		values := strings.Fields(value[1])
-		for j := 0; j<len(keys) && j<len(values) ; j++ {
+		for j := 0; j < len(keys) && j < len(values); j++ {
 			protocolMap[keys[j]], _ = strconv.ParseUint(values[j], 10, 64)
 		}
 		snmpMap[protocol] = protocolMap

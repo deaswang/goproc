@@ -1,15 +1,14 @@
 package proc
 
-import (
-)
+import ()
 
 // Net the net info
 type Net struct {
-	Arp      []NetArp                      `json:"arp"`
-	Dev      []NetDev                      `json:"dev"`
-	TCP      []NetTCP                      `json:"tcp"`
-	UDP      []NetUDP                      `json:"udp"`
-	Netstat  map[string]map[string]uint64  `json:"netstat"`
+	Arp     []NetArp                     `json:"arp"`
+	Dev     []NetDev                     `json:"dev"`
+	TCP     []NetTCP                     `json:"tcp"`
+	UDP     []NetUDP                     `json:"udp"`
+	Netstat map[string]map[string]uint64 `json:"netstat"`
 }
 
 // GetNet read the net folder

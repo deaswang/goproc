@@ -2,14 +2,14 @@ package proc
 
 import (
 	"io/ioutil"
-	"strings"
-	"strconv"
 	"path/filepath"
+	"strconv"
+	"strings"
 )
 
 // ProcessFdInfo the process fdinfo struct
 type ProcessFdInfo struct {
-	ID    string `json:"id"`
+	ID string `json:"id"`
 	// Name  string `json:"name"`
 	Pos   uint64 `json:"pos"`
 	Flags string `json:"flags"`

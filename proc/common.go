@@ -1,10 +1,10 @@
 package proc
 
 import (
-	"os"
 	"io/ioutil"
-	"strings"
+	"os"
 	"strconv"
+	"strings"
 )
 
 // readFile read lines from path, if path is not exist read defaultPath
@@ -59,4 +59,3 @@ func parseBool(value string) bool {
 	}
 	return false
 }
-

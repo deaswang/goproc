@@ -92,4 +92,3 @@ func GetCPUInfo(path string) (*CPUInfo, error) {
 	cpuinfo.Processors = append(cpuinfo.Processors, processor)
 	return &cpuinfo, nil
 }
-

@@ -11,14 +11,14 @@ const interruptsPath = "/proc/interrupts"
 
 // Interrupt one line interrupt
 type Interrupt struct {
-	Name   string            `json:"name"`
-	Counts map[string]uint64 `json:"counts"`
-	Description string       `json:"description"`
+	Name        string            `json:"name"`
+	Counts      map[string]uint64 `json:"counts"`
+	Description string            `json:"description"`
 }
 
 // Interrupts all interrupts
 type Interrupts struct {
-	Entry  []Interrupt  `json:"entry"`
+	Entry []Interrupt `json:"entry"`
 }
 
 // GetInterrupts get interrupts info from path

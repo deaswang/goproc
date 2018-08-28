@@ -29,8 +29,7 @@ type DiskStat struct {
 
 // DiskStats all disk stats
 type DiskStats struct {
-	Disks   []DiskStat  `json:"disks"`
-
+	Disks []DiskStat `json:"disks"`
 }
 
 // GetDiskStats read disk stats info from path file
@@ -67,4 +66,3 @@ func GetDiskStats(path string) (*DiskStats, error) {
 	}
 	return &diskStats, nil
 }
-

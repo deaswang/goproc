@@ -10,14 +10,14 @@ const buddyinfoPath = "/proc/buddyinfo"
 
 // Buddy single buddy info
 type Buddy struct {
-	Node   int    `json:"node"`
-	Zone   string `json:"zone"`
-	Pages  []int  `json:"pages"`
+	Node  int    `json:"node"`
+	Zone  string `json:"zone"`
+	Pages []int  `json:"pages"`
 }
 
 // BuddyInfo buddy info
 type BuddyInfo struct {
-	Buddys  []Buddy  `json:"buddys"`
+	Buddys []Buddy `json:"buddys"`
 }
 
 // GetBuddyInfo read buddyinfo file info from path
@@ -50,7 +50,7 @@ func GetBuddyInfo(path string) (*BuddyInfo, error) {
 		}
 		i++
 		buddy.Zone = fields[i]
-		for i++; i<len(fields); i++ {
+		for i++; i < len(fields); i++ {
 			page, err := strconv.Atoi(fields[i])
 			if err != nil {
 				continue
@@ -62,5 +62,3 @@ func GetBuddyInfo(path string) (*BuddyInfo, error) {
 	}
 	return &buddyinfo, nil
 }
-
-

@@ -20,7 +20,7 @@ type Mount struct {
 
 // Mounts define mounts file
 type Mounts struct {
-	Mounts  []Mount   `json:"mounts"`
+	Mounts []Mount `json:"mounts"`
 }
 
 // GetMounts read the mounts file
@@ -44,7 +44,7 @@ func GetMounts(path string) (*Mounts, error) {
 		mount.Options = strings.Split(fields[3], ",")
 		mount.Dump, _ = strconv.Atoi(fields[4])
 		mount.Pass, _ = strconv.Atoi(fields[5])
-		
+
 		mounts.Mounts = append(mounts.Mounts, mount)
 	}
 

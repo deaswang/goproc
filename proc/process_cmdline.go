@@ -2,9 +2,9 @@ package proc
 
 import (
 	"io/ioutil"
+	"path/filepath"
 	"strconv"
 	"strings"
-	"path/filepath"
 )
 
 // GetProcessCmdline get cmdline info for pid

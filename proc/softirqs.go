@@ -33,7 +33,7 @@ func GetSoftirqs(path string) (map[string]map[string]uint64, error) {
 		if len(fields) == 0 {
 			continue
 		}
-		
+
 		name := strings.TrimSuffix(fields[0], ":")
 		softirqs[name] = make(map[string]uint64, numCPU)
 		j := 1

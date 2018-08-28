@@ -2,9 +2,9 @@ package proc
 
 import (
 	"io/ioutil"
+	"path/filepath"
 	"strconv"
 	"strings"
-	"path/filepath"
 )
 
 // GetProcessIO get io info for pid

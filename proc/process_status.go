@@ -2,13 +2,13 @@ package proc
 
 import (
 	"io/ioutil"
+	"path/filepath"
 	"strconv"
 	"strings"
-	"path/filepath"
 )
 
 // GetProcessStatus get status info for pid
-func GetProcessStatus(pid int)  (map[string]string, error) {
+func GetProcessStatus(pid int) (map[string]string, error) {
 	path := filepath.Join(procPath, strconv.Itoa(pid), "status")
 	b, err := ioutil.ReadFile(path)
 
