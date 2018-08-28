@@ -10,7 +10,7 @@ import (
 	"strconv"
 )
 
-// VERSION
+// VERSION app version
 const VERSION = "0.2"
 
 var portFlag int
@@ -39,7 +39,7 @@ func readToken() error {
 		return err
 	}
 	buf := bufio.NewReader(f)
-	return SetToken(buf)
+	return setToken(buf)
 }
 
 func main() {

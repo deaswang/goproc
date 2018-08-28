@@ -10,7 +10,8 @@ import (
 
 var tokenList map[string]bool
 
-func SetToken(buf *bufio.Reader) error {
+// setToken set tokenList for auth
+func setToken(buf *bufio.Reader) error {
 	tokenList = make(map[string]bool)
 	for {
 		line, err := buf.ReadString('\n')
