@@ -1,7 +1,5 @@
 package proc
 
-import ()
-
 // Net the net info
 type Net struct {
 	Arp     []NetArp                     `json:"arp"`
