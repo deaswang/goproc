@@ -1,5 +1,6 @@
 # goproc
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/deaswang/goproc)](https://goreportcard.com/report/github.com/deaswang/goproc)
 [![Build Status](https://travis-ci.org/deaswang/goproc.svg?branch=master)](https://travis-ci.org/deaswang/goproc)
 
 goproc is an RESTful api server for view linux /proc path file information.

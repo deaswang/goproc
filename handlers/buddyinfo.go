@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"net/http"
 	"encoding/json"
+	"net/http"
 
 	"github.com/deaswang/goproc/proc"
 )
@@ -22,4 +22,3 @@ func Buddyinfo(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Write(b)
 }
-

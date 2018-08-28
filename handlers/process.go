@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"net/http"
 	"encoding/json"
+	"net/http"
 
 	"github.com/deaswang/goproc/proc"
 )
@@ -38,4 +38,3 @@ func Process(w http.ResponseWriter, r *http.Request, pid int) {
 	w.WriteHeader(http.StatusOK)
 	w.Write(b)
 }
-

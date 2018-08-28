@@ -6,8 +6,8 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"strconv"
 	"runtime"
+	"strconv"
 )
 
 // VERSION
@@ -44,7 +44,7 @@ func readToken() error {
 
 func main() {
 	flag.Parse()
-	
+
 	log.Printf("goproc v%s (built %s)\n", VERSION, runtime.Version())
 	err := readToken()
 	var router http.Handler
