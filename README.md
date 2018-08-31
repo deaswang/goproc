@@ -35,9 +35,9 @@ auth use request Header field token.
 
 添加认证 token 到 token.txt。如果没有 token.txt 文件，请求不需验证。验证使用请求 token Header 值。
 
-use postman to open doc/goproc.postman_collection.json test.
+use postman to import doc/goproc.postman_collection.json and goproc.postman_environment.json test.
 
-使用 postman 打开 doc/goproc.postman_collection.json 测试。
+使用 postman 导入 doc/goproc.postman_collection.json 和 goproc.postman_environment.json 测试。
 
 ## API
 
