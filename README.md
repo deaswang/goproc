@@ -18,7 +18,7 @@ goproc
 
 ## Usage
 
-```bash
+```
 Usage of goproc:
   -cert string
         The cert file name for tls. (default "ssl.csr")
