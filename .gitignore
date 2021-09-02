@@ -11,6 +11,10 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
+# IDE
+.vscode
+.idea
+
 ssl.csr
 ssl.key
 goproc
