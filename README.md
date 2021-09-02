@@ -1,5 +1,6 @@
 # goproc
 
+[![Go](https://github.com/deaswang/goproc/actions/workflows/go.yml/badge.svg?branch=master)](https://github.com/deaswang/goproc/actions/workflows/go.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/deaswang/goproc)](https://goreportcard.com/report/github.com/deaswang/goproc)
 
 goproc is an RESTful api server for view linux /proc path file information.
@@ -11,7 +12,7 @@ goproc 是读取 linux proc 路径内文件信息的 RESTful API。
 ```bash
 go get github.com/deaswang/goproc
 cd $GOPATH/src/github.com/deaswang/goproc
-go install
+make all
 goproc
 ```
 
@@ -70,7 +71,7 @@ It will return json response or error.
 Build docker at root path.
 
 ```bash
-docker build -t goproc .
+make docker
 ```
 
 Run docker container.
