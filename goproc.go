@@ -11,7 +11,7 @@ import (
 )
 
 // VERSION app version
-const VERSION = "0.2"
+const VERSION = "0.2.1"
 
 var portFlag int
 var tokenFlag string
@@ -49,7 +49,7 @@ func main() {
 	err := readToken()
 	var router http.Handler
 	if err != nil {
-		log.Println("no token")
+		log.Println("WARNING: without token")
 		router = InitRouter(false)
 	} else {
 		router = InitRouter(true)

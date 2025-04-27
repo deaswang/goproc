@@ -26,8 +26,8 @@ func GetVersion(path string) (*Version, error) {
 		return nil, errors.New("Empty version file")
 	}
 	var version = Version{}
-	linux := strings.TrimSpace(lines[0][strings.Index(lines[0], "Linux version")+13 : strings.Index(lines[0], "(gcc version")])
-	gcc := strings.TrimSpace(lines[0][strings.Index(lines[0], "(gcc version")+12 : strings.Index(lines[0], "#1")])
+	linux := strings.TrimSpace(lines[0][strings.Index(lines[0], "Linux version")+13 : strings.Index(lines[0], "(gcc (GCC) ")])
+	gcc := strings.TrimSpace(lines[0][strings.Index(lines[0], "(gcc (GCC) ")+10 : strings.Index(lines[0], "#1")])
 	time := strings.TrimSpace(lines[0][strings.Index(lines[0], "#1")+2:])
 	version.LinuxVersion = linux[:strings.Index(linux, " ")]
 	version.BuildUser = linux[strings.Index(linux, "(")+1 : strings.Index(linux, ")")]
