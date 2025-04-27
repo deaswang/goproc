@@ -1,7 +1,7 @@
 package proc
 
 import (
-	"io/ioutil"
+	"os"
 	"path/filepath"
 	"strconv"
 	"strings"
@@ -20,13 +20,13 @@ type ProcessFdInfo struct {
 func GetProcessFdInfo(pid int) ([]ProcessFdInfo, error) {
 	// fdPath := filepath.Join(procPath, strconv.Itoa(pid), "fd")
 	fdInfoPath := filepath.Join(procPath, strconv.Itoa(pid), "fdinfo")
-	files, err := ioutil.ReadDir(fdInfoPath)
+	files, err := os.ReadDir(fdInfoPath)
 	if err != nil {
 		return nil, err
 	}
 	var fdinfos = make([]ProcessFdInfo, 0)
 	for _, fi := range files {
-		b, err := ioutil.ReadFile(filepath.Join(fdInfoPath, fi.Name()))
+		b, err := os.ReadFile(filepath.Join(fdInfoPath, fi.Name()))
 		if err != nil {
 			continue
 		}

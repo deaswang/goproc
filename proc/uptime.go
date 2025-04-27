@@ -23,20 +23,20 @@ func GetUptime(path string) (*Uptime, error) {
 		return nil, err
 	}
 	if len(lines) < 1 {
-		return nil, errors.New("Empty uptime file")
+		return nil, errors.New("empty uptime file")
 	}
 	var uptime = Uptime{}
 	fields := strings.Fields(lines[0])
 	if len(fields) != 2 {
-		return nil, errors.New("Wrong format uptime")
+		return nil, errors.New("wrong format uptime")
 	}
 	total, err := strconv.ParseFloat(fields[0], 64)
 	if err != nil {
-		return nil, errors.New("Wrong format uptime")
+		return nil, errors.New("wrong format uptime")
 	}
 	idle, err := strconv.ParseFloat(fields[1], 64)
 	if err != nil {
-		return nil, errors.New("Wrong format uptime")
+		return nil, errors.New("wrong format uptime")
 	}
 	uptime.Total = (time.Duration(total) * time.Second).String()
 	uptime.Idle = (time.Duration(idle) * time.Second).String()

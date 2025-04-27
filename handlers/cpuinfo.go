@@ -34,7 +34,7 @@ func Cpuinfo(w http.ResponseWriter, r *http.Request) {
 				return
 			}
 		}
-		http.Error(w, err.Error(), http.StatusBadRequest)
+		http.Error(w, "bad request", http.StatusBadRequest)
 	} else {
 		b, err := json.Marshal(cpuinfo)
 		if err != nil {

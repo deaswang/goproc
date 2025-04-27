@@ -1,7 +1,6 @@
 package proc
 
 import (
-	"io/ioutil"
 	"os"
 	"strconv"
 	"strings"
@@ -14,7 +13,7 @@ func readFile(path, defaultPath string) (lines []string, err error) {
 		path = defaultPath
 	}
 
-	b, err := ioutil.ReadFile(path)
+	b, err := os.ReadFile(path)
 	if err != nil {
 		return nil, err
 	}

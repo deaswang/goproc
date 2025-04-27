@@ -2,7 +2,7 @@ package proc
 
 import (
 	"errors"
-	"io/ioutil"
+	"os"
 	"path/filepath"
 	"strconv"
 	"strings"
@@ -11,14 +11,14 @@ import (
 // GetProcessLimits get limits info for pid
 func GetProcessLimits(pid int) (map[string]map[string]string, error) {
 	path := filepath.Join(procPath, strconv.Itoa(pid), "limits")
-	b, err := ioutil.ReadFile(path)
+	b, err := os.ReadFile(path)
 
 	if err != nil {
 		return nil, err
 	}
 	lines := strings.Split(string(b), "\n")
 	if len(lines) < 2 {
-		return nil, errors.New("File empty")
+		return nil, errors.New("file empty")
 	}
 	indexLimit := strings.Index(lines[0], "Limit")
 	indexSoft := strings.Index(lines[0], "Soft Limit")

@@ -23,7 +23,7 @@ func GetVersion(path string) (*Version, error) {
 		return nil, err
 	}
 	if len(lines) < 1 {
-		return nil, errors.New("Empty version file")
+		return nil, errors.New("empty version file")
 	}
 	var version = Version{}
 	linux := strings.TrimSpace(lines[0][strings.Index(lines[0], "Linux version")+13 : strings.Index(lines[0], "(gcc (GCC) ")])

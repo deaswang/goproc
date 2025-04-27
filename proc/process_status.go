@@ -1,7 +1,7 @@
 package proc
 
 import (
-	"io/ioutil"
+	"os"
 	"path/filepath"
 	"strconv"
 	"strings"
@@ -10,7 +10,7 @@ import (
 // GetProcessStatus get status info for pid
 func GetProcessStatus(pid int) (map[string]string, error) {
 	path := filepath.Join(procPath, strconv.Itoa(pid), "status")
-	b, err := ioutil.ReadFile(path)
+	b, err := os.ReadFile(path)
 
 	if err != nil {
 		return nil, err

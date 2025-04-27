@@ -1,7 +1,7 @@
 package proc
 
 import (
-	"io/ioutil"
+	"os"
 	"path/filepath"
 	"strconv"
 	"strings"
@@ -68,7 +68,7 @@ type ProcessStat struct {
 func GetProcessStat(pid int) (*ProcessStat, error) {
 	path := filepath.Join(procPath, strconv.Itoa(pid), "stat")
 
-	b, err := ioutil.ReadFile(path)
+	b, err := os.ReadFile(path)
 
 	if err != nil {
 		return nil, err

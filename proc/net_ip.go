@@ -29,11 +29,11 @@ type NetSocket struct {
 func parseNetSocket(f []string) (*NetSocket, error) {
 
 	if len(f) < 11 {
-		return nil, errors.New("Cannot parse net socket line: " + strings.Join(f, " "))
+		return nil, errors.New("can't parse net socket line: " + strings.Join(f, " "))
 	}
 
-	if strings.Index(f[4], ":") == -1 {
-		return nil, errors.New("Cannot parse tx/rx queues: " + f[4])
+	if !strings.Contains(f[4], ":") {
+		return nil, errors.New("can't parse tx/rx queues: " + f[4])
 	}
 
 	q := strings.Split(f[4], ":")
