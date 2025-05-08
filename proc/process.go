@@ -2,7 +2,6 @@ package proc
 
 import (
 	"errors"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strconv"
@@ -32,7 +31,7 @@ type Process struct {
 
 // GetProcesses get all process base info
 func GetProcesses() (map[int]BaseProcess, error) {
-	files, err := ioutil.ReadDir(procPath)
+	files, err := os.ReadDir(procPath)
 	if err != nil {
 		return nil, err
 	}

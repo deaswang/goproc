@@ -1,0 +1,19 @@
+[
+  {
+    "id": "4bru752qexv",
+    "v": 1,
+    "name": "goproc",
+    "variables": [
+      {
+        "key": "port",
+        "value": "8809",
+        "secret": false
+      },
+      {
+        "key": "token",
+        "value": "73ecc500-3bdf-40ba-8fa3-aa9020ff5204",
+        "secret": false
+      }
+    ]
+  }
+]
