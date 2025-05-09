@@ -16,8 +16,9 @@ type Router struct {
 // define router list
 var routerList = map[string]http.HandlerFunc{
 	"/":           index,
-	"/cpuinfo":    handlers.Cpuinfo,
 	"/buddyinfo":  handlers.Buddyinfo,
+	"/cgroups":    handlers.Cgroups,
+	"/cpuinfo":    handlers.Cpuinfo,
 	"/diskstats":  handlers.Diskstats,
 	"/interrupts": handlers.Interrupts,
 	"/loadavg":    handlers.Loadavg,
