@@ -6,9 +6,360 @@
     "requests": [
       {
         "v": "12",
+        "name": "buddyinfo",
+        "method": "GET",
+        "endpoint": "127.0.0.1:<<port>>/buddyinfo",
+        "params": [],
+        "headers": [
+          {
+            "key": "token",
+            "value": "<<token>>",
+            "active": true,
+            "description": ""
+          }
+        ],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "12",
+        "endpoint": "http://127.0.0.1:<<port>>/cgroups",
+        "name": "cgroups",
+        "params": [],
+        "headers": [
+          {
+            "key": "token",
+            "value": "<<token>>",
+            "active": true,
+            "description": ""
+          }
+        ],
+        "method": "GET",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "12",
         "name": "cpuinfo",
         "method": "GET",
         "endpoint": "http://127.0.0.1:<<port>>/cpuinfo",
+        "params": [],
+        "headers": [
+          {
+            "key": "token",
+            "value": "<<token>>",
+            "active": true,
+            "description": ""
+          }
+        ],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "12",
+        "name": "diskstats",
+        "method": "GET",
+        "endpoint": "127.0.0.1:<<port>>/diskstats",
+        "params": [],
+        "headers": [
+          {
+            "key": "token",
+            "value": "<<token>>",
+            "active": true,
+            "description": ""
+          }
+        ],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "12",
+        "name": "interrupts",
+        "method": "GET",
+        "endpoint": "127.0.0.1:<<port>>/interrupts",
+        "params": [],
+        "headers": [
+          {
+            "key": "token",
+            "value": "<<token>>",
+            "active": true,
+            "description": ""
+          }
+        ],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "12",
+        "name": "loadavg",
+        "method": "GET",
+        "endpoint": "127.0.0.1:<<port>>/loadavg",
+        "params": [],
+        "headers": [
+          {
+            "key": "token",
+            "value": "<<token>>",
+            "active": true,
+            "description": ""
+          }
+        ],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "12",
+        "name": "locks",
+        "method": "GET",
+        "endpoint": "127.0.0.1:<<port>>/locks",
+        "params": [],
+        "headers": [
+          {
+            "key": "token",
+            "value": "<<token>>",
+            "active": true,
+            "description": ""
+          }
+        ],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "12",
+        "name": "meminfo",
+        "method": "GET",
+        "endpoint": "127.0.0.1:<<port>>/meminfo",
+        "params": [],
+        "headers": [
+          {
+            "key": "token",
+            "value": "<<token>>",
+            "active": true,
+            "description": ""
+          }
+        ],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "12",
+        "name": "misc",
+        "method": "GET",
+        "endpoint": "127.0.0.1:<<port>>/misc",
+        "params": [],
+        "headers": [
+          {
+            "key": "token",
+            "value": "<<token>>",
+            "active": true,
+            "description": ""
+          }
+        ],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "12",
+        "name": "mounts",
+        "method": "GET",
+        "endpoint": "127.0.0.1:<<port>>/mounts",
+        "params": [],
+        "headers": [
+          {
+            "key": "token",
+            "value": "<<token>>",
+            "active": true,
+            "description": ""
+          }
+        ],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "12",
+        "name": "partitions",
+        "method": "GET",
+        "endpoint": "127.0.0.1:<<port>>/partitions",
+        "params": [],
+        "headers": [
+          {
+            "key": "token",
+            "value": "<<token>>",
+            "active": true,
+            "description": ""
+          }
+        ],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "12",
+        "name": "snmp",
+        "method": "GET",
+        "endpoint": "127.0.0.1:<<port>>/snmp",
+        "params": [],
+        "headers": [
+          {
+            "key": "token",
+            "value": "<<token>>",
+            "active": true,
+            "description": ""
+          }
+        ],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "12",
+        "name": "softirqs",
+        "method": "GET",
+        "endpoint": "127.0.0.1:<<port>>/softirqs",
+        "params": [],
+        "headers": [
+          {
+            "key": "token",
+            "value": "<<token>>",
+            "active": true,
+            "description": ""
+          }
+        ],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "12",
+        "name": "stat",
+        "method": "GET",
+        "endpoint": "127.0.0.1:<<port>>/stat",
         "params": [],
         "headers": [
           {
@@ -116,61 +467,7 @@
         "v": "12",
         "name": "processes",
         "method": "GET",
-        "endpoint": "127.0.0.1:<<port>>/processes",
-        "params": [],
-        "headers": [
-          {
-            "key": "token",
-            "value": "<<token>>",
-            "active": true,
-            "description": ""
-          }
-        ],
-        "preRequestScript": "",
-        "testScript": "",
-        "auth": {
-          "authType": "inherit",
-          "authActive": true
-        },
-        "body": {
-          "contentType": null,
-          "body": null
-        },
-        "requestVariables": [],
-        "responses": {}
-      },
-      {
-        "v": "12",
-        "name": "meminfo",
-        "method": "GET",
-        "endpoint": "127.0.0.1:<<port>>/meminfo",
-        "params": [],
-        "headers": [
-          {
-            "key": "token",
-            "value": "<<token>>",
-            "active": true,
-            "description": ""
-          }
-        ],
-        "preRequestScript": "",
-        "testScript": "",
-        "auth": {
-          "authType": "inherit",
-          "authActive": true
-        },
-        "body": {
-          "contentType": null,
-          "body": null
-        },
-        "requestVariables": [],
-        "responses": {}
-      },
-      {
-        "v": "12",
-        "name": "misc",
-        "method": "GET",
-        "endpoint": "127.0.0.1:<<port>>/misc",
+        "endpoint": "http://127.0.0.1:<<port>>/processes",
         "params": [],
         "headers": [
           {
@@ -198,276 +495,6 @@
         "name": "net",
         "method": "GET",
         "endpoint": "127.0.0.1:<<port>>/net",
-        "params": [],
-        "headers": [
-          {
-            "key": "token",
-            "value": "<<token>>",
-            "active": true,
-            "description": ""
-          }
-        ],
-        "preRequestScript": "",
-        "testScript": "",
-        "auth": {
-          "authType": "inherit",
-          "authActive": true
-        },
-        "body": {
-          "contentType": null,
-          "body": null
-        },
-        "requestVariables": [],
-        "responses": {}
-      },
-      {
-        "v": "12",
-        "name": "mounts",
-        "method": "GET",
-        "endpoint": "127.0.0.1:<<port>>/mounts",
-        "params": [],
-        "headers": [
-          {
-            "key": "token",
-            "value": "<<token>>",
-            "active": true,
-            "description": ""
-          }
-        ],
-        "preRequestScript": "",
-        "testScript": "",
-        "auth": {
-          "authType": "inherit",
-          "authActive": true
-        },
-        "body": {
-          "contentType": null,
-          "body": null
-        },
-        "requestVariables": [],
-        "responses": {}
-      },
-      {
-        "v": "12",
-        "name": "partitions",
-        "method": "GET",
-        "endpoint": "127.0.0.1:<<port>>/partitions",
-        "params": [],
-        "headers": [
-          {
-            "key": "token",
-            "value": "<<token>>",
-            "active": true,
-            "description": ""
-          }
-        ],
-        "preRequestScript": "",
-        "testScript": "",
-        "auth": {
-          "authType": "inherit",
-          "authActive": true
-        },
-        "body": {
-          "contentType": null,
-          "body": null
-        },
-        "requestVariables": [],
-        "responses": {}
-      },
-      {
-        "v": "12",
-        "name": "softirqs",
-        "method": "GET",
-        "endpoint": "127.0.0.1:<<port>>/softirqs",
-        "params": [],
-        "headers": [
-          {
-            "key": "token",
-            "value": "<<token>>",
-            "active": true,
-            "description": ""
-          }
-        ],
-        "preRequestScript": "",
-        "testScript": "",
-        "auth": {
-          "authType": "inherit",
-          "authActive": true
-        },
-        "body": {
-          "contentType": null,
-          "body": null
-        },
-        "requestVariables": [],
-        "responses": {}
-      },
-      {
-        "v": "12",
-        "name": "stat",
-        "method": "GET",
-        "endpoint": "127.0.0.1:<<port>>/stat",
-        "params": [],
-        "headers": [
-          {
-            "key": "token",
-            "value": "<<token>>",
-            "active": true,
-            "description": ""
-          }
-        ],
-        "preRequestScript": "",
-        "testScript": "",
-        "auth": {
-          "authType": "inherit",
-          "authActive": true
-        },
-        "body": {
-          "contentType": null,
-          "body": null
-        },
-        "requestVariables": [],
-        "responses": {}
-      },
-      {
-        "v": "12",
-        "name": "snmp",
-        "method": "GET",
-        "endpoint": "127.0.0.1:<<port>>/snmp",
-        "params": [],
-        "headers": [
-          {
-            "key": "token",
-            "value": "<<token>>",
-            "active": true,
-            "description": ""
-          }
-        ],
-        "preRequestScript": "",
-        "testScript": "",
-        "auth": {
-          "authType": "inherit",
-          "authActive": true
-        },
-        "body": {
-          "contentType": null,
-          "body": null
-        },
-        "requestVariables": [],
-        "responses": {}
-      },
-      {
-        "v": "12",
-        "name": "locks",
-        "method": "GET",
-        "endpoint": "127.0.0.1:<<port>>/locks",
-        "params": [],
-        "headers": [
-          {
-            "key": "token",
-            "value": "<<token>>",
-            "active": true,
-            "description": ""
-          }
-        ],
-        "preRequestScript": "",
-        "testScript": "",
-        "auth": {
-          "authType": "inherit",
-          "authActive": true
-        },
-        "body": {
-          "contentType": null,
-          "body": null
-        },
-        "requestVariables": [],
-        "responses": {}
-      },
-      {
-        "v": "12",
-        "name": "loadavg",
-        "method": "GET",
-        "endpoint": "127.0.0.1:<<port>>/loadavg",
-        "params": [],
-        "headers": [
-          {
-            "key": "token",
-            "value": "<<token>>",
-            "active": true,
-            "description": ""
-          }
-        ],
-        "preRequestScript": "",
-        "testScript": "",
-        "auth": {
-          "authType": "inherit",
-          "authActive": true
-        },
-        "body": {
-          "contentType": null,
-          "body": null
-        },
-        "requestVariables": [],
-        "responses": {}
-      },
-      {
-        "v": "12",
-        "name": "buddyinfo",
-        "method": "GET",
-        "endpoint": "127.0.0.1:<<port>>/buddyinfo",
-        "params": [],
-        "headers": [
-          {
-            "key": "token",
-            "value": "<<token>>",
-            "active": true,
-            "description": ""
-          }
-        ],
-        "preRequestScript": "",
-        "testScript": "",
-        "auth": {
-          "authType": "inherit",
-          "authActive": true
-        },
-        "body": {
-          "contentType": null,
-          "body": null
-        },
-        "requestVariables": [],
-        "responses": {}
-      },
-      {
-        "v": "12",
-        "name": "interrupts",
-        "method": "GET",
-        "endpoint": "127.0.0.1:<<port>>/interrupts",
-        "params": [],
-        "headers": [
-          {
-            "key": "token",
-            "value": "<<token>>",
-            "active": true,
-            "description": ""
-          }
-        ],
-        "preRequestScript": "",
-        "testScript": "",
-        "auth": {
-          "authType": "inherit",
-          "authActive": true
-        },
-        "body": {
-          "contentType": null,
-          "body": null
-        },
-        "requestVariables": [],
-        "responses": {}
-      },
-      {
-        "v": "12",
-        "name": "diskstats",
-        "method": "GET",
-        "endpoint": "127.0.0.1:<<port>>/diskstats",
         "params": [],
         "headers": [
           {
