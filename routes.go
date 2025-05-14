@@ -19,6 +19,7 @@ var routerList = map[string]http.HandlerFunc{
 	"/buddyinfo":  handlers.Buddyinfo,
 	"/cgroups":    handlers.Cgroups,
 	"/cpuinfo":    handlers.Cpuinfo,
+	"/devices":    handlers.Devices,
 	"/diskstats":  handlers.Diskstats,
 	"/interrupts": handlers.Interrupts,
 	"/loadavg":    handlers.Loadavg,

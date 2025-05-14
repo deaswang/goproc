@@ -33,8 +33,9 @@
       },
       {
         "v": "12",
-        "endpoint": "http://127.0.0.1:<<port>>/cgroups",
         "name": "cgroups",
+        "method": "GET",
+        "endpoint": "http://127.0.0.1:<<port>>/cgroups",
         "params": [],
         "headers": [
           {
@@ -44,13 +45,12 @@
             "description": ""
           }
         ],
-        "method": "GET",
+        "preRequestScript": "",
+        "testScript": "",
         "auth": {
           "authType": "inherit",
           "authActive": true
         },
-        "preRequestScript": "",
-        "testScript": "",
         "body": {
           "contentType": null,
           "body": null
@@ -63,6 +63,33 @@
         "name": "cpuinfo",
         "method": "GET",
         "endpoint": "http://127.0.0.1:<<port>>/cpuinfo",
+        "params": [],
+        "headers": [
+          {
+            "key": "token",
+            "value": "<<token>>",
+            "active": true,
+            "description": ""
+          }
+        ],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "12",
+        "name": "devices",
+        "method": "GET",
+        "endpoint": "http://127.0.0.1:<<port>>/devices",
         "params": [],
         "headers": [
           {
