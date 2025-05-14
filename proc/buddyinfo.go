@@ -32,7 +32,7 @@ func GetBuddyInfo(path string) (*BuddyInfo, error) {
 	for _, line := range lines {
 		buddy := Buddy{}
 		fields := strings.Fields(line)
-		if len(fields) <= 0 {
+		if len(fields) < 4 {
 			continue
 		}
 		i := 0

@@ -35,7 +35,7 @@
         "v": "12",
         "name": "cgroups",
         "method": "GET",
-        "endpoint": "http://127.0.0.1:<<port>>/cgroups",
+        "endpoint": "127.0.0.1:<<port>>/cgroups",
         "params": [],
         "headers": [
           {
@@ -62,7 +62,7 @@
         "v": "12",
         "name": "cpuinfo",
         "method": "GET",
-        "endpoint": "http://127.0.0.1:<<port>>/cpuinfo",
+        "endpoint": "127.0.0.1:<<port>>/cpuinfo",
         "params": [],
         "headers": [
           {
@@ -89,7 +89,7 @@
         "v": "12",
         "name": "devices",
         "method": "GET",
-        "endpoint": "http://127.0.0.1:<<port>>/devices",
+        "endpoint": "127.0.0.1:<<port>>/devices",
         "params": [],
         "headers": [
           {
@@ -494,7 +494,7 @@
         "v": "12",
         "name": "processes",
         "method": "GET",
-        "endpoint": "http://127.0.0.1:<<port>>/processes",
+        "endpoint": "127.0.0.1:<<port>>/processes",
         "params": [],
         "headers": [
           {

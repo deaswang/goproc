@@ -44,7 +44,7 @@ func GetDiskStats(path string) (*DiskStats, error) {
 	for _, line := range lines {
 		disk := DiskStat{}
 		fields := strings.Fields(line)
-		if len(fields) <= 0 {
+		if len(fields) < 14 {
 			continue
 		}
 		disk.Major, _ = strconv.Atoi(fields[0])
